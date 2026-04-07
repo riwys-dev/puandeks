@@ -1,0 +1,43 @@
+.company-box + .company-box {
+  margin-top: 24px;
+}
+
+
+.pagination {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination-list {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+}
+
+.pagination-list li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 36px;
+  height: 36px;
+  padding: 0 12px;
+  background-color: #f5f5f5;
+  border-radius: 6px;
+  font-size: 15px;
+  color: #222;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.pagination-list li a:hover {
+  background-color: #ddd;
+}
+
+.pagination-list li a.active {
+  background-color: #2E76F6;
+  color: #fff;
+  font-weight: 500;
+}

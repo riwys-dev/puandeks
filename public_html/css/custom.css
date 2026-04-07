@@ -1,0 +1,387 @@
+/*============================================================================================*/
+/* Your custom styles below */
+/*============================================================================================*/
+
+.section_puandeks {
+    background: #eafaf0; 
+    padding: 60px 0;     
+    color: #000;         
+    padding-top: 120px;
+  }
+  
+  
+  .section_puandeks .trust_heading {
+    font-size: 2rem;     
+    font-weight: 700;
+    margin-bottom: 15px; 
+    line-height: 1.3;    
+  }
+  
+  
+  .section_puandeks .trust_subtext {
+    font-size: 1.125rem; 
+    margin-bottom: 20px; 
+    color: #333;         
+  }
+  
+  
+  .section_puandeks .trust_btn {
+    margin-bottom: 10px; 
+    border-radius: 30px;
+  }
+  .btn_rounded:hover {
+    background: #b8cdf8 !important;
+    color: #222 !important;
+  }
+
+  
+  .section_puandeks .trust_note {
+    font-size: 0.95rem;
+    color: #444;
+  }
+  
+  
+  .section_puandeks .trust_image {
+    max-width: 400px; 
+    margin-top: 20px; 
+  }
+  
+  
+  
+  .check_reviews_section {
+    background-color: #fcfbf3; 
+    padding: 60px 0;         
+  }
+  
+  /* Başlık */
+  .check_title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 30px;      /* Başlık altı boşluk */
+  }
+  
+  /* Form dış çerçeve (input + buton) */
+  .check_form_wrapper {
+    display: inline-flex;
+    align-items: center;
+    border: 2px solid #000;   /* Siyah çerçeve */
+    border-radius: 50px;      /* Tam yuvarlatılmış kenar */
+    padding: 5px;
+  }
+  
+  /* Metin girişi */
+  .check_input {
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    border-radius: 50px;      /* Kenarlar input içinde de yuvarlak kalsın */
+    flex: 1;                  /* Alanı kaplasın */
+    min-width: 200px;         /* Çok daralmaması için */
+  }
+  
+  /* Buton */
+  .check_button {
+    background-color: #000;   /* Siyah zemin */
+    color: #fff;
+    border: none;
+    border-radius: 50px;      /* Yuvarlak köşeler */
+    padding: 10px 25px;
+    cursor: pointer;
+  }
+  .check_button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Küçük not (örnek URL) */
+  .check_note {
+    font-size: 0.875rem;
+    color: #666;
+    margin-top: 10px;
+  }
+  
+  /**************************** Bilgi alanı *********************************************************/
+
+  .trust_stats_section {
+    background-color: #fcfbf3; /* Görseldeki gibi açık renk */
+    padding: 60px 0;          /* Dikey boşluk */
+  }
+  
+  .trust_stats_title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+  
+  .stat_number {
+    font-size: 1.4rem;          /* Büyük rakam/yüzde */
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  
+  .stat_text {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.4;
+  }
+  
+  /******************************** İnfo Cards ***************************************************/
+
+  .info_cards_section {
+    background-color: #fcfbf3; /* Açık krem ton */
+    padding: 60px 0;          /* Dikey boşluk */
+  }
+  
+  .info_card {
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    color: #333;
+    min-height: 140px;        /* Kart yüksekliği (isteğe bağlı) */
+  }
+  
+  /* Başlık */
+  .info_card h5 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  /* Açıklama */
+  .info_card p {
+    font-size: 0.95rem;
+    margin-bottom: 0;
+  }
+  
+  /* Kartlara farklı pastel arka plan renkleri */
+  .info_card_1 { background-color: #fdecea; }
+  .info_card_2 { background-color: #eefbf3; }
+  .info_card_3 { background-color: #fff9db; }
+  .info_card_4 { background-color: #f0f4ff; }
+  .info_card_5 { background-color: #fff2e8; }
+  
+
+  /******************************* Banner ***************************************************/
+
+
+  .two_col_section {
+    padding: 60px 0; /* Üst-alt boşluk */
+    /* Arka plan rengi sabit kalabilir veya isteğe göre ekleyebilirsiniz */
+  }
+  
+  .two_col_card {
+    background-color: #f6f6f6; /* Gri ton */
+    border-radius: 12px;       /* Kenarları yuvarlat */
+    padding: 30px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  .two_col_card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  
+  .two_col_card p {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Yuvarlak buton stili */
+  .btn_rounded {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #3578fa;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px; /* Buton köşeleri yuvarlatılmış */
+    font-weight: 600;
+    transition: background 0.3s;
+  }
+  
+  .btn_rounded:hover {
+    background: #b8cdf8;
+    color: #222;
+  }
+  
+  /**************************** Blog Cards **********************************/
+
+  .inspiration_section {
+    padding: 60px 0; /* Üst-alt boşluk */
+    background-color: #fcfbf3; /* İsterseniz farklı bir renk seçebilirsiniz */
+  }
+  
+  .inspiration_title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+  
+  /* Kart genel görünümü */
+  .inspiration_card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: left; /* Başlık ve linki solda hizalamak isterseniz */
+  }
+  
+  /* Üst kısımdaki renkli alan + görsel */
+  .inspiration_img_wrapper {
+    width: 100%;
+    height: 150px;            /* Yükseklik isteğe göre ayarlanabilir */
+    border-radius: 8px;
+    overflow: hidden;         /* Kenarlar yuvarlatılsın diye */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+  
+  .inspiration_img_wrapper img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;        /* Görselin taşmaması için */
+  }
+  
+  /* Kart başlığı */
+  .inspiration_card h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  /* “Daha fazlasını oku...” linki */
+  .inspiration_link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #3578fa;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .inspiration_link:hover {
+    text-decoration: underline;
+  }
+  
+   /**************************** Arama alanı **********************************/
+   .cta_section {
+    background-color: #26da8c; /* Yeşil arka plan (isteğe göre renk) */
+    padding: 60px 0;          /* Üst-alt boşluk */
+  }
+  
+  .cta_title {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+  }
+  
+  /* Yuvarlak buton (mevcut .btn_rounded stiline benzer) */
+  .cta_button {
+    background-color: #3578fa;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 30px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 15px;
+    transition: background 0.3s;
+  }
+  .cta_button:hover {
+    background-color: #b8cdf8; /* Hover rengi */
+  }
+  
+  /* Alt link */
+  .cta_link a {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: 500;
+  }
+
+  
+  /* Kullanıcı menüsü: Avatar + isim yan yana */
+.user-menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.user-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+
+.user-badge {
+  background-color: #6a1b9a;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.user-name {
+  font-size: 14px;
+  color: #fff;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+/* Açılır menü: net, ortalanmış, stabil */
+.user-menu .dropdown-menu {
+  display: none !important;
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background-color: #000 !important;
+  border-radius: 8px;
+  min-width: 200px;
+  padding: 0;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  z-index: 9999;
+  transform: none !important;
+  opacity: 1 !important;
+  transition: none !important;
+  border: none !important;
+}
+
+/* Menü gösterilsin */
+.user-menu:hover .dropdown-menu {
+  display: block !important;
+}
+
+/* Menü öğeleri */
+.user-menu .dropdown-menu li {
+  list-style: none;
+  border-bottom: 1px solid #222;
+}
+
+.user-menu .dropdown-menu li:last-child {
+  border-bottom: none;
+}
+
+.user-menu .dropdown-menu li a {
+  display: block;
+  padding: 14px 20px;
+  font-size: 15px;
+  color: #fff !important;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  text-align: left;
+}
+
+.user-menu .dropdown-menu li a:hover {
+  background-color: #1a1a1a;
+}
+
+

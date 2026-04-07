@@ -1,0 +1,272 @@
+/* RESET ve BASİT GENEL STİL */
+* {
+    box-sizing: border-box;
+    margin: 0; 
+    padding: 0;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #fdfcf9; /* Açık krem ton */
+    color: #333;
+  }
+  a {
+    text-decoration: none;
+    color: #3578fa;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+
+  /* ÜST SİYAH MENÜ ALANI */
+  .header_top {
+    background-color: #1c1c1c;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header_container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  /* Logo ve Arama */
+  .header_left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .header_left img {
+    height: 30px;
+  }
+  .search_bar {
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+  }
+  .search_bar input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 200px;
+  }
+
+  /* Menü Linkleri */
+  .header_links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .header_links a {
+    color: #fff;
+    font-size: 0.95rem;
+  }
+  .header_links a:hover {
+    opacity: 0.8;
+  }
+  /* Sağ Buton (Şirketler için) */
+  .company_btn {
+    background-color: #a6c0f0;
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: #222;
+    font-weight: 600;
+  }
+  .company_btn:hover {
+    background-color: #0647c0;
+    color: #fff;
+  }
+
+  /* Kullanıcı Avatar + İsim (Sağ Üst) */
+  .user_menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .avatar_circle {
+    width: 32px; 
+    height: 32px; 
+    background-color: #fdd6e2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600; 
+    color: #000;
+    overflow: hidden;
+  }
+  .user_name {
+    color: #fff;
+    max-width: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* KULLANICI BİLGİ SATIRI (Avatar, İsim, Ülke, İstatistikler) */
+  .user_info_section {
+    background-color: #fcfbf3;
+    padding-top: 120px;
+    padding-bottom: 40px;
+  }
+  .user_info_container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .user_info_left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .avatar_large {
+    width: 60px; 
+    height: 60px;
+    background-color: #fdd6e2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600; 
+    color: #000;
+    overflow: hidden;
+  }
+  .user_info_left h3 {
+    font-size: 1.25rem;
+    margin-bottom: 5px;
+  }
+  .user_info_left span {
+    color: #999;
+    font-size: 0.9rem;
+  }
+  .user_stats {
+    display: flex;
+    gap: 30px;
+  }
+  .stat_item {
+    text-align: center;
+  }
+  .stat_item .stat_number {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  .stat_item a {
+    font-size: 0.85rem;
+    color: #3578fa;
+  }
+
+  /* SAYFA İÇERİK (Kartlar) */
+  .content_container {
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto 40px auto;
+  }
+  .card_box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .card_box h4 {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  .card_box label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  .card_box input[type="text"],
+  .card_box input[type="email"],
+  .card_box select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  .card_box button,
+  .card_box .btn {
+    display: inline-block;
+    background-color: #3578fa;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  .card_box button:hover,
+  .card_box .btn:hover {
+    background-color: #b8cdf8;
+    color: #222;
+  }
+  .note {
+    font-size: 0.8rem;
+    color: #999;
+    margin-bottom: 10px;
+  }
+
+  /* TOGGLE (Basit) */
+  .toggle_row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .toggle_label {
+    font-size: 0.95rem;
+  }
+  .toggle_switch input[type="checkbox"] {
+    width: 40px;
+    height: 20px;
+    -webkit-appearance: none;
+    background-color: #ccc;
+    border-radius: 10px;
+    position: relative;
+    outline: none;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  .toggle_switch input[type="checkbox"]:checked {
+    background-color: #3578fa;
+  }
+  .toggle_switch input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #fff;
+    top: 1px;
+    left: 1px;
+    transition: transform 0.3s;
+  }
+  .toggle_switch input[type="checkbox"]:checked::before {
+    transform: translateX(20px);
+  }
+
+  /* FOOTER */
+  .footer_bottom {
+    background-color: #1c1c1c;
+    color: #ccc;
+    text-align: center;
+    padding: 20px 0;
+  }
+  .footer_bottom a {
+    color: #ccc;
+  }
+  .footer_bottom a:hover {
+    color: #fff;
+  }

@@ -1,0 +1,102 @@
+/* Rozet Kartı */
+#rozetim_card {
+    /* Zaten card_box stiline sahip olabilir */
+  }
+  
+  /* Kartın üst başlık alanı */
+  .rozet-header {
+    margin-bottom: 8px;
+  }
+  
+  .rozet-header h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .rozet-new-label {
+    background-color: #ffd54f; /* Sarı ton (örnek) */
+    color: #333;
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+  
+  /* Rozet listesi */
+  .rozet-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  
+  .rozet-list li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+  }
+  
+  /* Rozet durumu metni */
+  .rozet-status {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 0.85rem;
+    color: #666;
+    font-style: italic;
+  }
+  
+  /* Modal (Yeni Rozet Kazanıldı) */
+  .rozet-modal {
+    display: none; /* Başlangıçta gizli */
+    position: fixed;
+    z-index: 9999;
+    left: 0; 
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); /* Saydam arka plan */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .rozet-modal-content {
+    background: #fff;
+    padding: 20px;
+    width: 400px;
+    max-width: 90%;
+    border-radius: 8px;
+    position: relative;
+    text-align: center;
+  }
+  
+  .rozet-modal-content h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .rozet-modal-content p {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 10px; 
+    right: 15px;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  #rozetModalOkBtn {
+    background-color: #3578fa;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  #rozetModalOkBtn:hover {
+    background-color: #2556b7;
+  }
+  

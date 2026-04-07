@@ -1,0 +1,141 @@
+/* Genel Stil */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FCFBF3 !important;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Login Alanı */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    margin-top: 100px;
+}
+
+.login-box {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+}
+
+/* Başlık */
+h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Input */
+.input-group {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 6px 10px;
+    height: 42px;
+    border: 1px solid #ddd;
+    border-radius: 0px !important; /* Köşeleri yuvarlak olmasın */
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+    box-shadow: none !important;
+}
+
+/* Giriş Yap Butonu */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #0066cc;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    margin-top: 25px;
+    opacity: 1; /* Tam görnür */
+}
+
+.login-btn.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Veya Alanı */
+.separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    color: #777;
+    font-size: 14px;
+}
+
+.separator span {
+    flex-grow: 1;
+    height: 1px;
+    background: #ddd;
+    margin: 0 10px;
+}
+.separator p {
+    margin: 0 10px; /* Çizgiler ile arasındaki boşluk */
+    font-size: 14px;
+    font-weight: bold;
+    color: #777;
+    line-height: 1; /* Metni tam ortalamak için */
+}
+/* Alternatif Giriş Yöntemleri */
+.google-login,
+.sso-login {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.google-login {
+    background-color: #dae7fd;
+    color: #0066cc;
+}
+
+.sso-login {
+    background-color: #e8ecf7;
+    color: #0033cc;
+}
+
+/* Buton İkonlar */
+.google-login img,
+.sso-login img {
+    width: 20px;
+    height: 20px;
+}
+
+
+

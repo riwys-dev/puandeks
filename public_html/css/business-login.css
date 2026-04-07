@@ -1,0 +1,225 @@
+/* Genel Stil */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #9FF6D3 !important;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Login Alanı */
+.business-login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    margin-top: 100px;
+}
+
+.login-box {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+}
+
+/* Başlık */
+h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Input */
+.input-group {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 6px 10px;
+    height: 42px;
+    border: 1px solid #ddd;
+    border-radius: 0px !important; /* Köşeleri yuvarlak olmasın */
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+    box-shadow: none !important;
+}
+
+/* Giriş Yap Butonu */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #0066cc;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    margin-top: 25px;
+    opacity: 1; /* Tam görünür */
+}
+
+.login-btn.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Veya Alanı */
+.separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    color: #777;
+    font-size: 14px;
+}
+
+.separator span {
+    flex-grow: 1;
+    height: 1px;
+    background: #ddd;
+    margin: 0 10px;
+}
+.separator p {
+    margin: 0 10px; /* Çizgiler ile arasındaki boşluk */
+    font-size: 14px;
+    font-weight: bold;
+    color: #777;
+    line-height: 1; /* Metni tam ortalamak için */
+}
+/* Alternatif Giriş Yöntemleri */
+.google-login,
+.sso-login {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.google-login {
+    background-color: #dae7fd;
+    color: #0066cc;
+}
+
+.sso-login {
+    background-color: #e8ecf7;
+    color: #0033cc;
+}
+
+/* Buton İkonları */
+.google-login img,
+.sso-login img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Çerez Tercihleri Pop-up */
+.cookie-popup h2 {
+    margin-top: 120px; /* Üst boşluk ekleyerek pencerenin içine çek */
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left !important;
+    margin-left: 0;
+}
+
+
+/* Onay Mesajı (Büyük Beyaz Pencere) */
+.cookie-confirmation {
+    display: none;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #2a6c2d;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 18px;
+    width: 500px;
+    animation: fadeInOut 2.5s ease-in-out;
+}
+
+/* İçerik dzenleme */
+.cookie-confirmation-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.cookie-confirmation p {
+    font-size: 20px; /* Yazı boyutunu artır */
+    font-weight: bold;
+    color: white !important;
+}
+
+/* Onay işareti */
+.check-icon {
+    font-size: 40px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+/* Görünüp kaybolma efekti */
+@keyframes fadeInOut {
+    0% { opacity: 0; transform: translate(-50%, -50%) scale(0.9); }
+    10% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+    90% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+    100% { opacity: 0; transform: translate(-50%, -50%) scale(0.9); }
+}
+
+
+
+
+
+.required {
+    color: blue;
+    font-weight: bold;
+    float: right;
+}
+.cookie-title {
+    display: flex;
+    justify-content: space-between; /* Sağ ve sol hizalama */
+    align-items: center; /* Dikey ortalama */
+}
+.cookie-title span {
+    font-weight: bold;
+}
+#savePreferences {
+    background-color: #1a73e8; /* Mavi arka plan */
+    color: white;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1000; /* Diğer öğelerin üstünde olmasını sağlar */
+}
+

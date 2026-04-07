@@ -1,0 +1,21 @@
+RewriteEngine On
+RewriteBase /admin/
+
+RewriteRule ^index$ index.php [L]
+RewriteRule ^reviews$ reviews.php [L]
+RewriteRule ^reports$ reports.php [L]
+RewriteRule ^user-list$ user-list.php [L]
+RewriteRule ^businesses$ businesses.php [L]
+RewriteRule ^categories$ categories.php [L]
+RewriteRule ^subscriptions$ subscriptions.php [L]
+RewriteRule ^general-settings$ general-settings.php [L]
+RewriteRule ^account-settings$ account-settings.php [L]
+RewriteRule ^integrations$ integrations.php [L]
+RewriteRule ^package-list$ package-list.php [L]
+RewriteRule ^package-create$ package-create.php [L]
+RewriteRule ^blog-management$ blog-management.php [L]
+RewriteRule ^blog-management-business$ blog-management-business.php [L]
+RewriteRule ^seo-settings$ seo-settings.php [L]
+RewriteRule ^admin-notification$ admin-notification.php [L]
+RewriteRule ^security$ security.php [L]
+RewriteRule ^logout$ logout.php [L]

@@ -1,0 +1,253 @@
+/* Genel Sayfa Ayarları */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: #f9f9f9;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Header */
+  .header {
+    background: #1c1c1c;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  .header #logo img {
+    width: 140px;
+  }
+  .main-menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+  }
+  .main-menu ul li {
+    margin-left: 30px;
+  }
+  .main-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .main-menu ul li a.active,
+  .main-menu ul li a:hover {
+    color: #FFC107;
+  }
+  
+  /* Hero Bölümü */
+  .hero {
+    background: url('../img/company_landing.jpg') center center/cover no-repeat;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 100px; /* Fixed header kaplamaması için */
+  }
+  .hero h1 {
+    font-size: 3rem;
+    color: #fff;
+  }
+  .hero h1 span {
+    color: #FFC107;
+  }
+  .hero p {
+    font-size: 1.25rem;
+    color: #fff;
+    margin: 20px 0;
+  }
+  .btn {
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  .primary-btn {
+    background: #FFC107;
+    color: #222;
+  }
+  .primary-btn:hover {
+    background: #e0a800;
+  }
+  
+  /* İşletme Genel Bakış Bölümü */
+  .business-overview {
+    background: #fff;
+    padding: 60px 0;
+    margin-top: -100px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  .overview-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .rating-summary {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+  }
+  .rating-summary .rating-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FFC107;
+  }
+  .rating-summary .stars i {
+    color: #FFC107;
+    font-size: 1.5rem;
+  }
+  .rating-summary .review-count {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #777;
+  }
+  .overview-text {
+    flex: 2;
+    padding: 20px;
+    text-align: left;
+  }
+  .overview-text h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  .overview-text p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* İşletme Kartları Bölümü */
+  .company-cards {
+    padding: 60px 0;
+    background: #f9f9f9;
+    text-align: center;
+  }
+  .company-cards h2 {
+    margin-bottom: 40px;
+    font-size: 2rem;
+  }
+  .cards-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+  .card {
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  .card-content {
+    padding: 20px;
+    text-align: left;
+  }
+  .card-content h3 {
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+    color: #333;
+  }
+  .card-rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  .card-rating .rating {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-right: 10px;
+    color: #FFC107;
+  }
+  .card-rating .stars i {
+    color: #FFC107;
+    font-size: 1rem;
+  }
+  .secondary-btn {
+    background: #3578fa;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+  .secondary-btn:hover {
+    background: #2c5bbf;
+  }
+  
+  /* Yorumlar Bölümü */
+  .reviews-section {
+    padding: 60px 0;
+    background: #fff;
+    text-align: center;
+  }
+  .reviews-section h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  .reviews-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+  .review-card {
+    background: #f1f1f1;
+    padding: 20px;
+    border-radius: 5px;
+    width: 350px;
+    font-style: italic;
+    color: #555;
+  }
+  .review-card .review-author {
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: right;
+    color: #333;
+  }
+  
+  /* Footer */
+  footer {
+    background: #1c1c1c;
+    color: #ccc;
+    padding: 40px 0;
+    text-align: center;
+  }
+  .footer-logo img {
+    width: 120px;
+  }
+  .footer-links {
+    margin: 20px 0;
+  }
+  .footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+  }
+  .footer-links a:hover {
+    color: #FFC107;
+  }
+  .footer-copy {
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 20px;
+  }
+  

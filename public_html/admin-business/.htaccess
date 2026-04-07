@@ -1,0 +1,47 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+# --- payment ---
+RewriteRule ^payment/?$ payment.php [L,QSA]
+RewriteRule ^payment-result/?$ payment-result.php [L,QSA]
+
+# Gerçek dosya ve klasörleri es geç
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# --- Özel sayfalar ---
+RewriteRule ^register-complete/?$ register-complete.php [L,QSA]
+RewriteRule ^verify-pending/?$ verify-pending.php [L,QSA]
+RewriteRule ^business-verify/?$ business-verify.php [L,QSA]
+RewriteRule ^verify-update-email/?$ verify-update-email.php [L,QSA]
+
+# --- Genel sayfalar ---
+RewriteRule ^index/?$ index.php [L,QSA]
+RewriteRule ^register/?$ register.php [L,QSA]
+RewriteRule ^help/?$ help.php [L,QSA]
+RewriteRule ^blog/?$ blog.php [L,QSA]
+RewriteRule ^blog-post/?$ blog-post.php [L,QSA]
+RewriteRule ^plans/?$ plans.php [L,QSA]
+RewriteRule ^affiliate$ affiliate.php [QSA,L]
+
+# --- Claim ---
+RewriteRule ^register-claim/?$ register-claim.php [L,QSA]
+
+# --- Panel ---
+RewriteRule ^login/?$ login.php [L,QSA]
+RewriteRule ^home/?$ home.php [L,QSA]
+RewriteRule ^reviews/?$ reviews.php [L,QSA]
+
+RewriteRule ^integrations/?$ integrations.php [L,QSA]
+
+RewriteRule ^banner-manager/?$ banner-manager.php [L,QSA]
+
+RewriteRule ^widget-manager/?$ widget-manager.php [L,QSA]
+RewriteRule ^widget-select/?$ widget-select.php [L,QSA]
+RewriteRule ^widget-preview/?$ widget-preview.php [L,QSA] 
+
+RewriteRule ^pricing/?$ pricing.php [L,QSA]
+RewriteRule ^automations/?$ automations.php [L,QSA]
+RewriteRule ^settings/?$ settings.php [L,QSA]
+RewriteRule ^business-notification/?$ business-notification.php [L,QSA]

@@ -1,0 +1,160 @@
+/* css/cookie.css */
+
+/* Banner (sayfa altındaki çerez uyarısı) */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
+  z-index: 2147483647; /* her şeyin stünde */
+}
+.cookie-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.cookie-btn:hover {
+  opacity: 0.9;
+}
+
+/* ============================= */
+/* Cookie Settings Page (tam sayfa) */
+/* ============================= */
+
+.cookie-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+.cookie-page-header img {
+  height: 28px;
+}
+.cookie-page-header button {
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.cookie-page-body {
+  max-width: 600px;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.cookie-page-body h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+}
+.cookie-option {
+  margin: 20px 0;
+}
+
+/* Option Row */
+.cookie-option-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+.cookie-option-row div {
+  flex: 1;
+  min-width: 0;
+}
+.cookie-option-row .switch {
+  flex-shrink: 0;
+}
+.cookie-option-row h4 {
+  margin: 0 0 5px 0;
+}
+
+/* Footer */
+.cookie-modal-footer {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.save-cookie-btn {
+  background: #05462F; 
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.save-cookie-btn:hover {
+  background: #04DA8D;
+  color:#1C1C1C; 
+}
+
+/* Toggle Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 24px;
+}
+.switch input {
+  opacity: 0;
+  width: 0; height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 24px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px; width: 18px;
+  left: 3px; bottom: 3px;
+  background-color: #fff;
+  transition: .4s;
+  border-radius: 50%;
+}
+input:checked + .slider {
+  background-color: #32a067;
+}
+input:checked + .slider:before {
+  transform: translateX(18px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cookie-page-body { width: 90%; }
+}
+@media (max-width: 480px) {
+  .cookie-page-body { width: 95%; padding: 15px; }
+  .cookie-page-body h2 { font-size: 18px; }
+
+  /* Mobilde yazı üstte, toggle altta */
+  .cookie-option-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .cookie-option-row .switch {
+    margin-top: 8px;
+  }
+}

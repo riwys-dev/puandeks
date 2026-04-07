@@ -1,0 +1,64 @@
+/* Dropdown menü z-index ve arka plan */
+.dropdown-menu {
+    z-index: 9999;           /* Menünün arkada kalmaması için */
+    background-color: #fff;  /* Beyaz arka plan */
+    color: #333;
+  }
+  
+  /* Dropdown menü link rengi */
+  .dropdown-menu a.dropdown-item {
+    color: #333 !important;
+  }
+  .dropdown-menu a.dropdown-item:hover {
+    background-color: #f1f1f1;
+    color: #000 !important;
+  }
+  
+  /* Hamburger menü (sadece küçük ekranlarda) */
+  @media (min-width: 992px) {
+    .btn_mobile {
+      display: none !important; /* 992px üstünde hamburger gizli */
+    }
+  }
+  @media (max-width: 991px) {
+    .main-menu {
+      display: none !important; /* Mobilde varsayılan gizli */
+    }
+    .main-menu.open {
+      display: block !important;/* Toggle ile aç */
+      background-color: #fff;   /* Mobil menü arka plan */
+      position: absolute;
+      top: 70px; /* Header altında */
+      right: 0;
+      width: 200px; /* Mobil menü genişliği */
+      padding: 10px;
+      z-index: 9999;
+    }
+    .main-menu ul li a {
+      color: #333 !important;
+    }
+  }
+  /* Avatar yuvarlak görünüm */
+.avatar_circle {
+    width: 32px;
+    height: 32px;
+    background-color: #fdd6e2; /* Örnek pembe ton */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    color: #000;
+    overflow: hidden; /* Resim kullanırsanız taşma engellenir */
+  }
+  
+  /* Kullanıcı adı metni */
+  .user_name {
+    color: #fff; /* Varsayılan menü rengiyle uyumluysa bu değeri koruyun veya değiştirin */
+    max-width: 100px; /* Genişliği sınırlamak isterseniz */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  

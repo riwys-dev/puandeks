@@ -1,0 +1,50 @@
+Options -MultiViews
+RewriteEngine On
+RewriteBase /
+
+# api dizinini gizlemeden çalıştır (ilk kural)
+RewriteCond %{REQUEST_URI} ^/api/
+RewriteRule ^api/ - [L]
+
+# backend/api dizinini gizlemeden çalıştır
+RewriteRule ^backend/api/ - [L]
+
+# Company slug 
+RewriteRule ^company/([a-zA-Z0-9-]+)$ company-profile.php?slug=$1 [QSA,L]
+RewriteRule ^company-profile/([a-zA-Z0-9-]+)$ company-profile.php?slug=$1 [QSA,L]
+
+# .php uzantısını gizle
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^([a-zA-Z0-9_-]+)$ $1.php [QSA,L]
+
+# .html uzantısını gizle
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^([a-zA-Z0-9_-]+)$ $1.html [QSA,L]
+
+# Kullanıcı profili ve alt sayfaları
+RewriteRule ^user-([a-zA-Z0-9_-]+)$ user.php?username=$1 [QSA,L]
+RewriteRule ^user-([a-zA-Z0-9_-]+)-reviews$ user-reviews.php?username=$1 [QSA,L]
+RewriteRule ^user-([a-zA-Z0-9_-]+)-notifications$ user-notifications.php?username=$1 [QSA,L]
+RewriteRule ^user-([a-zA-Z0-9_-]+)-settings$ user-settings.php?username=$1 [QSA,L]
+
+# Özel yönlendirmeler
+RewriteRule ^apple-user-name$ apple-user-name.php [QSA,L]
+RewriteRule ^blog-post/([0-9]+)$ blog-post.php?id=$1 [QSA,L]
+RewriteRule ^company-search$ company-search.php [QSA,L]
+RewriteRule ^company-search/([a-zA-Z0-9_-]+)$ company-search.php?q=$1 [QSA,L]
+RewriteRule ^company-profile$ company-profile.php [QSA,L]
+RewriteRule ^add-review$ add-review.php [QSA,L]
+RewriteRule ^add-new-company$ add-new-company.php [QSA,L]
+RewriteRule ^admin-login$ admin-login.php [QSA,L]
+RewriteRule ^login-handler$ login-handler.php [QSA,L]
+RewriteRule ^logout$ logout.php [QSA,L]
+RewriteRule ^user-profile$ user-profile.php [QSA,L]
+
+# Contact files 
+RewriteRule ^contact-legal$ contact-legal.php [QSA,L]
+RewriteRule ^contact-technical$ contact-technical.php [QSA,L]
+RewriteRule ^contact-sales$ contact-sales.php [QSA,L]

@@ -1,0 +1,97 @@
+/*************************************/
+/*       HELP HERO SECTION CSS       */
+/*************************************/
+
+/* Ana bölüm: Yeşil zemin */
+.help_hero_section {
+    background-color: #00b67a; /* Trustpilot yeşil tonuna yakın */
+    padding: 60px 0; /* Üst-alt boşluk */
+    color: #fff; /* Yazı rengi beyaz */
+  }
+  
+  /* İçerik konteyneri */
+  .help_hero_container {
+    max-width: 1200px;
+    margin: 0 auto;  /* Ortala */
+    display: flex;
+    align-items: center; /* Dikey hizalama */
+    justify-content: space-between; /* Solda metin, sağda görsel */
+    gap: 30px; /* Metin ve resim arası boşluk */
+    padding: 0 20px; /* Kenarlardan iç boşluk */
+  }
+  
+  /* Metin alanı */
+  .help_hero_text {
+    flex: 1; /* Metin tarafı genişlesin */
+  }
+  .help_hero_text h1 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+  }
+  .help_hero_text p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    font-weight: 400;
+  }
+  .help_hero_text .star {
+    font-size: 1.4rem;
+    margin-left: 6px;
+    color: #fff;
+  }
+  
+  /* Arama çubuğu */
+  .search_bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .search_bar input[type="text"] {
+    width: 260px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    font-size: 1rem;
+  }
+  .search_bar .search_btn {
+    background-color: #fff;
+    color: #00b67a;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .search_bar .search_btn:hover {
+    background-color: #f4f4f4;
+  }
+  
+  /* Görsel alanı */
+  .help_hero_image img {
+    width: 650px; /* İsteğe göre boyut */
+    height: auto;
+    display: block;
+    border-radius: 8px; /* Resme hafif köşe yuvarlama */
+    margin-bottom: -60px;
+  }
+  
+  /*************************************/
+  /*          RESPONSIVE KISIM         */
+  /*************************************/
+  @media (max-width: 991px) {
+    .help_hero_container {
+      flex-direction: column; /* Üst üste gelsin */
+      text-align: center; /* Metin ortalansın */
+    }
+    .help_hero_text {
+      margin-bottom: 20px; /* Resimle arada boşluk */
+    }
+    .search_bar input[type="text"] {
+      width: 100%; /* Mobilde tam genişlik */
+    }
+    .help_hero_image img {
+      width: 250px; /* Mobilde resim biraz küçülsün */
+    }
+  }
+  

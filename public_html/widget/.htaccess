@@ -1,0 +1,12 @@
+Options -MultiViews
+RewriteEngine On
+
+# Sadece widget.puandeks.com üzerinden erişime izin ver
+RewriteCond %{HTTP_HOST} !^widget\.puandeks\.com$ [NC]
+RewriteRule ^(.*)$ https://widget.puandeks.com/$1 [L,R=301]
+
+# HTTP → HTTPS zorla
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://widget.puandeks.com/$1 [L,R=301]
+
+DirectoryIndex index.php

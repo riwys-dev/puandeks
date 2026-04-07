@@ -1,0 +1,195 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Puandeks API (Demo)",
+    "version": "1.0.0",
+    "description": "Bu demo versiyonu yalnızca örnek amaçlıdır. Gerçek veri işlemez. \n\nAPI uç noktaları, tüketici, işletme ve yöneticiler için örnek istekleri temsil eder."
+  },
+  "servers": [
+    { "url": "https://api.puandeks.com/demo", "description": "Demo Sunucu" }
+  ],
+  "tags": [
+    { "name": "Auth", "description": "Kullanıcı kimlik doğrulama işlemleri" },
+    { "name": "Users", "description": "Tüketici kullanıcı işlemleri" },
+    { "name": "Companies", "description": "İşletme yönetimi işlemleri" },
+    { "name": "Reviews", "description": "Yorum yönetimi işlemleri" },
+    { "name": "Notifications", "description": "Bildirim işlemleri" }
+  ],
+  "paths": {
+    "/auth/login": {
+      "post": {
+        "tags": ["Auth"],
+        "summary": "Kullanıcı girişi (demo)",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "example": {
+                "email": "demo@puandeks.com",
+                "password": "123456"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Başarılı giriş örneği",
+            "content": {
+              "application/json": {
+                "example": {
+                  "success": true,
+                  "token": "demo-token-123",
+                  "user": { "id": 1, "name": "Samet", "role": "user" }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/auth/register": {
+      "post": {
+        "tags": ["Auth"],
+        "summary": "Yeni kullanıcı kaydı (demo)",
+        "responses": {
+          "201": {
+            "description": "Kayıt oluşturuldu (örnek)",
+            "content": {
+              "application/json": {
+                "example": {
+                  "success": true,
+                  "message": "Kayıt başarıyla tamamlandı. Lütfen e-postanızı doğrulayın."
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users": {
+      "get": {
+        "tags": ["Users"],
+        "summary": "Kullanıcı listesini getir (demo)",
+        "responses": {
+          "200": {
+            "description": "Örnek kullanıcı listesi",
+            "content": {
+              "application/json": {
+                "example": {
+                  "success": true,
+                  "users": [
+                    { "id": 1, "name": "Samet", "reviews": 5 },
+                    { "id": 2, "name": "Serkan", "reviews": 12 }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/companies": {
+      "get": {
+        "tags": ["Companies"],
+        "summary": "Tüm işletmeleri getir (demo)",
+        "responses": {
+          "200": {
+            "description": "Örnek işletme listesi",
+            "content": {
+              "application/json": {
+                "example": {
+                  "success": true,
+                  "companies": [
+                    { "id": 1, "name": "Riwys", "rating": 4.8 },
+                    { "id": 2, "name": "TechNova", "rating": 4.5 }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": ["Companies"],
+        "summary": "Yeni işletme ekle (demo)",
+        "responses": {
+          "201": {
+            "description": "İşletme eklendi (örnek)",
+            "content": {
+              "application/json": {
+                "example": {
+                  "success": true,
+                  "company_id": 15
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/reviews": {
+      "get": {
+        "tags": ["Reviews"],
+        "summary": "Tüm yorumları getir (demo)",
+        "responses": {
+          "200": {
+            "description": "Örnek yorum listesi",
+            "content": {
+              "application/json": {
+                "example": {
+                  "success": true,
+                  "count": 3,
+                  "reviews": [
+                    "Harika deneyim!",
+                    "Çok memnun kaldım.",
+                    "Geliştirilebilir ama iyi."
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": ["Reviews"],
+        "summary": "Yeni yorum ekle (demo)",
+        "responses": {
+          "201": {
+            "description": "Yorum oluşturuldu (örnek)",
+            "content": {
+              "application/json": {
+                "example": {
+                  "success": true,
+                  "review_id": 21
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/notifications": {
+      "get": {
+        "tags": ["Notifications"],
+        "summary": "Kullanıcı bildirimlerini getir (demo)",
+        "responses": {
+          "200": {
+            "description": "Örnek bildirim listesi",
+            "content": {
+              "application/json": {
+                "example": {
+                  "success": true,
+                  "notifications": [
+                    "Yeni yorumunuza yanıt geldi.",
+                    "Yeni bir rozet kazandınız!",
+                    "Faturanızı görüntüleyebilirsiniz."
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

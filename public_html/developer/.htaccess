@@ -1,0 +1,17 @@
+Options -MultiViews
+RewriteEngine On
+
+# Sadece developer.puandeks.com üzerinden erişime izin ver
+RewriteCond %{HTTP_HOST} !^developer\.puandeks\.com$ [NC]
+RewriteRule ^(.*)$ https://developer.puandeks.com/$1 [L,R=301]
+
+# Ana sayfa dosyası
+DirectoryIndex index.html
+
+# URL'den index.html'i gizle
+RewriteCond %{THE_REQUEST} \s/([^.]+)\.html [NC]
+RewriteRule ^ %1 [R=301,L]
+
+# index.html doğrudan çağrıldığında ana dizine yönlendir
+RewriteCond %{THE_REQUEST} \s/.*index\.html [NC]
+RewriteRule ^index\.html$ / [R=301,L]

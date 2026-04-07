@@ -1,0 +1,277 @@
+
+.pricing_section {
+  background-color: #fcfbf3; /* İsterseniz farklı açık ton seçebilirsiniz */
+  padding: 120px 0 60px 0;
+}
+
+.pricing_title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  margin-top: 60px;
+}
+
+/* Kartların genel stili */
+.pricing_card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 20px;
+  position: relative; /* Badge için */
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Kart içi başlık (ör. “Enterprise”, “Advanced”) */
+.pricing_card h5 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Fiyat / “Contact us for pricing” metni */
+.plan_price {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Özellik listesi */
+.plan_features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+.plan_features li {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* “Book a demo” butonu (mevcut btn_1 stilinizle uyumlu) */
+.plan_cta {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin-top: auto; /* Eğer dikey esneklik isterseniz */
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+}
+
+/* Badge (ör. “Most popular”) */
+.plan_badge {
+  position: absolute;
+  top: -10px;
+  right: 15px;
+  background-color: #32a067;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* Dipnot (yıldızlı fiyat açıklaması) */
+.pricing_note {
+  font-size: 0.875rem;
+  color: #666;
+  margin-top: 20px;
+}
+.pricing_note a {
+  color: #3578fa;
+  text-decoration: underline;
+}
+
+/***********************   prıcıng table ***************************************************/
+.comparison_section {
+  background-color: #fcfbf3; 
+  padding: 60px 0;          
+}
+.comparison_table {
+  border-collapse: separate !important;
+  border-spacing: 0;
+  overflow: hidden; /* Yuvarlatılmış kenarların düzgün görünmesi için */
+}
+
+/* 2) Üst satırın ilk ve son hücreleri */
+.comparison_table thead tr:first-child th:first-child {
+  border-top-left-radius: 10px;
+}
+.comparison_table thead tr:first-child th:last-child {
+  border-top-right-radius: 10px;
+}
+
+/* 3) Son satırın ilk ve son hücreleri */
+.comparison_table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+.comparison_table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}
+.comparison_table th,
+.comparison_table td {
+  vertical-align: middle;
+  text-align: left;
+  border: 1px solid #ddd;
+  padding: 12px;
+}
+
+.table_group_title td {
+  background-color: #eafaf0; /* Pastel yeşil veya isteğe göre */
+  font-weight: 700;
+  text-align: left;          /* Grup başlığını sola yaslayabiliriz */
+}
+
+/* Tablo başlıkları (Üstteki "Özellikler", "Enterprise", vb.) */
+.comparison_table thead th {
+  background-color: #fff; /* Dilerseniz #f8f8f8 gibi bir renk seçebilirsiniz */
+  font-weight: 600;
+}
+.collapsed {
+  display: none !important;
+}
+
+.arrow_icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+.group-toggle {
+  cursor: pointer;
+}
+
+/**************************** Toggle switch butons **************************************/
+
+/* Toggle container */
+.billing_switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px; /* Kartlardan biraz boşluk */
+}
+
+/* Switch wrapper */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+/* Hide the default checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Slider background */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 24px; /* Yuvarlatma */
+}
+
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: #fff;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+/* Toggle checked durumu */
+input:checked + .slider {
+  background-color: #7048e8; /* Dilediğiniz renk (#3578fa vs.) */
+}
+
+/* Buton sağa kayar */
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Slider yuvarlak */
+.slider.round {
+  border-radius: 24px;
+}
+
+/* Sorunuz mu var bize iletin butonu */
+.how_it_works_btn {
+  display: inline-block;
+  background-color: #fcfbf3; /* Butonun arka plan rengi */
+  border:1px solid #3578fa;
+  color: #3578fa;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: bolder;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.how_it_works_btn:hover {
+  background-color: #c4d3ee; /* Hover rengi */
+}
+
+
+
+/* Annual - Monthly */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #4CAF50; /* Hep yeşil */
+  border-radius: 34px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+/* Sadece slider'ın iç topu sağa kayacak */
+input:checked + .slider:before {
+  transform: translateX(22px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

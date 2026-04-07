@@ -1,0 +1,47 @@
+/* Çerez Banner'ı Stili */
+#cookie-consent-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Saydam arkaplan */
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    z-index: 10000;
+    font-size: 0.9rem;
+  }
+  #cookie-consent-banner p {
+    margin: 0;
+    flex: 1; /* Gerekiyorsa metin alanının genişlemesi için */
+  }
+  
+  /* Kabul Et Butonu */
+  #accept-cookie {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Reddet Butonu */
+  #reject-cookie {
+    background-color: #e74c3c; /* Tatlı kırmızı */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Buton hover efektleri (isteğe bağlı) */
+  #accept-cookie:hover,
+  #reject-cookie:hover {
+    opacity: 0.9;
+  }
+  

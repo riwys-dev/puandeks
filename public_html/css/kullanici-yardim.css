@@ -1,0 +1,189 @@
+/* Hero Bölümü */
+.help_hero {
+    /* Arka plan turuncu ton, isteğe göre renk kodunu değiştirebilirsiniz */
+    background-color: #ff6f0f; 
+    padding: 60px 0;
+    color: #fff; /* Metinlerin rengi */
+  }
+  
+  .help_hero .hero_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* container içi genişliği ortalamak isterseniz:
+       max-width: 1200px;
+       margin: 0 auto;
+    */
+  }
+  
+  /* Sol kısım: başlık, alt metin, arama */
+  .hero_text {
+    flex: 1;
+    max-width: 500px; /* Tercihe bağlı */
+  }
+  
+  /* Başlık */
+  .hero_text h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Alt metin */
+  .hero_text p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+  }
+  .hero_text .star {
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  /* Arama kutusu */
+  .search_box {
+    display: flex;
+    max-width: 400px;
+  }
+  .search_box input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 4px 0 0 4px;
+    font-size: 1rem;
+  }
+  .search_box button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    background-color: #fff;
+    color: #333;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  .search_box button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Sağ kısım: görsel */
+  .hero_image {
+    flex: 1;
+    text-align: right;
+  }
+  .hero_image img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: -60px;
+    /* İsteğe göre en fazla 400-500px genişlikte sınırlayabilirsiniz */
+    /* max-width: 400px; */
+  }
+  
+  /* Responsive düzeltmeler (tablet ve mobil) */
+  @media (max-width: 992px) {
+    .help_hero .hero_wrapper {
+      flex-direction: column;
+      text-align: center;
+    }
+    .hero_image {
+      margin-top: 20px;
+      text-align: center;
+    }
+  }
+  
+
+  /* Temel reset ve font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  /* Yardım bölümü kapsayıcı */
+  .help-section {
+    padding: 40px 0; /* Üst-alt boşluk */
+  }
+  .help-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Breadcrumb stili */
+  .breadcrumb {
+    font-size: 0.875rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  .breadcrumb a {
+    color: #3578fa;
+    text-decoration: none;
+  }
+  .breadcrumb a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Genel başlık */
+  .help-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+  }
+  
+  /* Kartların kapsayıcı satırı */
+  .cards-row {
+    display: flex;
+    gap: 20px; /* Kartlar arası boşluk */
+    flex-wrap: wrap; /* Ekran daraldığında alta geçebilmesi için */
+  }
+  
+  /* Her bir kart */
+  .help-card {
+    background-color: #fff;
+    flex: 1;               /* Mevcut alana göre esneyebilir */
+    min-width: 250px;      /* Kartlar çok daralmaması için */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  }
+  
+  /* Kart başlığı */
+  .help-card h3 {
+    font-size: 1.125rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+  
+  /* Liste ve bağlantılar */
+  .help-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .help-card ul li {
+    margin-bottom: 10px;
+  }
+  .help-card ul li a {
+    color: #3578fa;
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+  .help-card ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Mobil uyum (dar ekranlar) */
+  @media (max-width: 768px) {
+    .cards-row {
+      flex-direction: column; /* Kartlar alt alta */
+    }
+  }
+
+  
+
+  
+ 

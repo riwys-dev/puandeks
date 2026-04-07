@@ -1,0 +1,103 @@
+/* Sidebar mobilde açılır */
+.sidebar-nav {
+  transition: transform 0.3s ease;
+  z-index: 101;
+}
+
+/* Mobilde başlangıçta sidebar kapalı (ekran dışında) */
+@media (max-width: 768px) {
+  .sidebar-nav {
+    transform: translateX(-100%);
+  }
+
+  .sidebar-nav.open {
+    transform: translateX(0);
+  }
+
+  #sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 100;
+  }
+
+  #sidebar-overlay.active {
+    display: block;
+  }
+
+  #content-wrapper {
+    margin-left: 0 !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .topbar {
+    left: 0 !important;
+  }
+}
+
+/* Dropdown */
+.custom-dropdown {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.dropdown-select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+}
+
+.dropdown-arrow {
+  font-size: 14px;
+  color: #888;
+  margin-left: 8px;
+  pointer-events: none;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-options {
+  position: absolute;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-top: none;
+  background: #fff;
+  z-index: 99;
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 0 0 6px 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.dropdown-options li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-options li:hover {
+  background-color: #f1f1f1;
+}
+
+/* Aktif class ile açılır */
+.custom-dropdown.open .dropdown-options {
+  display: block;
+}
+
+/* Ok dönüşü */
+.custom-dropdown.open .dropdown-arrow {
+  transform: rotate(180deg);
+}
+/* Dropdown */

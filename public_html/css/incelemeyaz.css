@@ -1,0 +1,372 @@
+/* Yeşil arka plan */
+.hero-section {
+    background-color: #6DECB9; /* Mevcut yeşil arka plan */
+    text-align: center;
+    padding: 150px 20px !important;
+}
+
+/* Başlık ve alt başlık */
+.hero-content h1 {
+    font-size: 36px;
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Arama kutusu */
+.search-box {
+    display: flex;    
+    align-items: center;
+    background: white;
+    border-radius: 50px;
+    padding: 10px 15px;
+    width: 60%;
+    max-width: 600px; /* En fazla 600px genişlik */
+    margin: 0 auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Arama kutusu içindeki input */
+.search-box input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 15px;
+    border-radius: 50px;
+    background: transparent;
+    color: #333;
+}
+.search-box input:focus {
+    outline: none;
+    border: none;
+    caret-color: #2D64F1; /* Yanıp sönen imleç rengi */
+}
+
+/* Arama butonu */
+.search-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #333; /* İkonun rengi */
+    background: none !important; /* Arka planı tamamen kaldır */
+    border: none !important; /* Çerçeve varsa kaldır */
+    cursor: pointer; /* Tıklanabilir olduğunu göster */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto; /* Sabit genişlik kaldırıldı */
+    height: auto; /* Sabit yükseklik kaldırıldı */
+    line-height: normal;
+}
+
+.search-icon:hover {
+    background-color: #1E50D4;
+}
+
+/* 🔹 RESPONSIVE DÜZENLEMELER 🔹 */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 28px; /* Küçük ekranlar için başlığı küçült */
+    }
+
+    .hero-content p {
+        font-size: 16px; /* Alt başlığı küçült */
+    }
+
+    .search-box {
+        width: 80%; /* Tablet ve küçük ekranlarda daha geniş */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        padding: 50px 15px; /* Daha az padding ver */
+    }
+
+    .hero-content h1 {
+        font-size: 24px; /* Mobilde başlığı daha küçük yap */
+    }
+
+    .search-box {
+        width: 100%; /* Küçük ekranlarda tam genişlik */
+    }
+
+    .search-icon {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+}
+
+
+/* APP STORE BÖLÜMÜ */
+.app-section {
+    background-color: #fff; /* Beyaz arka plan */
+    padding: 60px 0; /* Üst-alt boşluk */
+    border: 1px solid #ddd; /* Kenar çizgisi ekler */
+    border-radius: 12px;
+    transition: box-shadow 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+.app-section:hover {
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.15); /* Daha belirgin gölge */
+    transform: translateY(-5px); /* Hafif yukarı kaldırma efekti */
+}
+
+/* İçerik Konteyneri */
+.app-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+
+/* Metin Alanı */
+.app-text {
+    flex: 1;
+    max-width: 500px;
+}
+
+.app-text h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.app-text p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Buton Alanı */
+.app-buttons .app-store-btn img {
+    width: 150px; /* Buton genişliği */
+}
+
+/* Görsel Alanı */
+.app-image img {
+    width: 300px; /* Görsel genişliği */
+}
+
+/* Responsive Tasarım */
+@media screen and (max-width: 768px) {
+    .app-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .app-image img {
+        width: 250px;
+        margin-top: 20px;
+    }
+}
+
+/* şirket ekle bölümü */
+
+.add-company {
+    text-align: center; /* İçeriği ortala */
+    padding: 50px 20px; /* Üst-alt ve yan boşluklar */
+}
+
+.add-company h2 {
+    font-size: 22px; /* Başlık boyutu */
+    font-weight: 600; /* Yarı kalın yazı */
+    margin-bottom: 12px; /* Alt boşluk */
+}
+
+.add-company p {
+    font-size: 16px;
+    color: #333; /* Açık siyah */
+    margin-bottom: 24px; /* Alt boşluk */
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.add-company-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #0056b3; /* Mavi buton rengi */
+    border: 2px solid #0056b3; /* Çizgili buton */
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Mouse ile üzerine gelince buton efekti */
+.add-company-btn:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+/* 🔽 Tablet (Orta Ekran) için Responsive Düzenleme */
+@media (max-width: 768px) {
+    .add-company {
+        padding: 40px 15px;
+    }
+
+    .add-company h2 {
+        font-size: 20px;
+    }
+
+    .add-company p {
+        font-size: 15px;
+    }
+
+    .add-company-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+/* 📱 Mobil (Küçük Ekran) için Responsive Düzenleme */
+@media (max-width: 480px) {
+    .add-company {
+        padding: 30px 10px;
+    }
+
+    .add-company h2 {
+        font-size: 18px;
+    }
+
+    .add-company p {
+        font-size: 14px;
+    }
+
+    .add-company-btn {
+        padding: 8px 18px;
+        font-size: 13px;
+        border-radius: 20px;
+    }
+}
+
+/* Pop-up (Modal) Arkaplan */
+.modal {
+    display: none; /* Başlangıçta gizli */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Saydam siyah arkaplan */
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* Pop-up İçeriği */
+.modal-content {
+    background-color: white;
+    width: 500px;
+    max-width: 90%;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+/* Başlık hizalaması */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd; /* Çizgi eklendi */
+    padding-bottom: 10px;
+}
+
+.modal-header h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* İçerik düzeni */
+.modal-body {
+    padding: 15px 20px;
+}
+.modal-body p {
+    font-size: 14px;
+    margin-bottom: 1px;
+}
+.modal-body input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* Butonu sağ alta alma */
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px 20px;
+    border-top: none;
+    flex-wrap: nowrap;
+}
+/* Mavi buton */
+.modal-footer .btn-primary {
+    background-color: #0044cc;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    width: auto;
+    min-width: 120px;
+}
+.modal-footer .btn-primary:hover {
+    background-color: #0033aa;
+}
+
+/* Kapatma Butonu */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Giriş Alanı */
+.modal-input {
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+/* Şirket Ekle Butonu */
+.modal-submit {
+    background-color: #0044cc;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    width: auto;
+    min-width: 120px;
+    align-self: flex-end;
+}
+
+.modal-submit:hover {
+    background-color: #0033aa;
+}

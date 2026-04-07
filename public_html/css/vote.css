@@ -1,0 +1,20 @@
+.vote-stars {
+  display: inline-block;
+}
+
+.vote-icon {
+  display: inline-block;
+  font-family: "Fontello", sans-serif;
+  content: "\e80b"; /* yıldız */
+  font-size: 22px;
+  margin: 0 2px;
+  color: #ccc; /* varsayılan boş */
+}
+
+.vote-icon::before {
+  content: '\e80b'; /* Fontello'dan yıldız ikonu */
+}
+
+.vote-icon.filled {
+  color: #ccc; /* JS ile override edilecek */
+}
